@@ -17,6 +17,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -30,13 +31,15 @@ public class BaseClass {
 	public static Properties p;
 	public static Logger logger;
 	public static ChromeOptions options = new ChromeOptions();
+	static EdgeOptions optionss =new EdgeOptions();
 	
 	@BeforeClass
 	@Parameters({"os", "browser"})
 	public void initilizeBrowser(String os, String browser) throws IOException {
 		logger=LogManager.getLogger(Logger.class.getName());
 		
-		//options.addArguments("--disable-blink-features=AutomationControlled");
+		optionss.addArguments("--disable-blink-features=AutomationControlled");
+		options.addArguments("--disable-blink-features=AutomationControlled");
 		
 		if(getProperties().getProperty("execution_env").equalsIgnoreCase("remote"))
 	 	{	
@@ -48,7 +51,7 @@ public class BaseClass {
 		//os
 		if(os.equalsIgnoreCase("windows"))
 		{
-			//options.addArguments("--disable-blink-features=AutomationControlled");
+			//optionss.addArguments("--disable-blink-features=AutomationControlled");
 			capabilities.setPlatform(Platform.WIN11);
 		}
 		else if(os.equalsIgnoreCase("mac"))
@@ -69,7 +72,9 @@ public class BaseClass {
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 			capabilities.setBrowserName("chrome"); 
 			break;
-		case "edge" : capabilities.setBrowserName("MicrosoftEdge"); break;
+		case "edge" :
+			capabilities.setCapability(ChromeOptions.CAPABILITY, optionss);
+			capabilities.setBrowserName("MicrosoftEdge"); break;
 		default: System.out.println("No matching browser.."); return;
 		}
 		
@@ -88,7 +93,8 @@ public class BaseClass {
 			
 		break;
 		case "edge": 
-			driver=new EdgeDriver(); break;
+			optionss.addArguments("--disable-blink-features=AutomationControlled");
+			driver=new EdgeDriver(optionss); break;
 		default: System.out.println("No matching browser..");
 					return;
 		}

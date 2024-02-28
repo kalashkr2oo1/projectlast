@@ -3,13 +3,6 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="Testcases.Test003">
-        <methods>
-          <include name="tearDown"/>
-          <include name="GymPage"/>
-          <include name="initilizeBrowser"/>
-        </methods>
-      </class> <!-- Testcases.Test003 -->
       <class name="Testcases.Test002">
         <methods>
           <include name="Freelistingpage"/>
@@ -17,6 +10,13 @@
           <include name="initilizeBrowser"/>
         </methods>
       </class> <!-- Testcases.Test002 -->
+      <class name="Testcases.Test003">
+        <methods>
+          <include name="tearDown"/>
+          <include name="GymPage"/>
+          <include name="initilizeBrowser"/>
+        </methods>
+      </class> <!-- Testcases.Test003 -->
       <class name="Testcases.Test001">
         <methods>
           <include name="JustDialHomePage"/>

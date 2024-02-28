@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import utilities.excel;
+
 public class freelist extends BasePage {
 	
 	public freelist(WebDriver driver) {
@@ -54,22 +56,12 @@ public class freelist extends BasePage {
 			 msg = errormsg.getText();
 		}
 		
-		public void printerrormsg() throws InterruptedException {
+		public void printerrormsg() throws InterruptedException, IOException {
 			System.out.println("--------------------------------------------------------------------------------------");
 			System.out.println("Error message="+ msg);
+			excel.writeExcelData("Sheet1",1,5,msg);
 		}
-//		
-//		public void freelistaction() throws InterruptedException {
-//		freebutton.click();
-//		number.click();
-//		number.sendKeys("1234567890");
-//		startbutton.click();
-//		Thread.sleep(2000);
-//		String msg = errormsg.getText();
-//		System.out.println("error message="+ msg);
-//		justbutton.click();
-//		Thread.sleep(2000);
-//		}
+
 }
 		
 	

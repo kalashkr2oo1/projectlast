@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import factoryy.BaseClass;
+import utilities.excel;
 
  
 
@@ -48,7 +49,7 @@ public class gym extends BasePage {
 				
 		}
 		
-		public void gyminfocollect() throws InterruptedException {
+		public void gyminfocollect() throws InterruptedException, IOException {
 			
 			List<WebElement> subMenuTitlesList = driver.findElements(subMenuTitles);
 			// for printing the details submenu 
@@ -56,6 +57,7 @@ public class gym extends BasePage {
 			for(int k = 0;k<subMenuTitlesList.size();k++) {
 				String s = subMenuTitlesList.get(k).getText();
 				System.out.println(s);
+				excel.writeExcelData("Sheet1",k+1,7,s);
 			}
 			for (int i = 0; i < subMenuTitlesList.size(); i++) {
 	            String Text = subMenuTitlesList.get(i).getText();
@@ -68,6 +70,7 @@ public class gym extends BasePage {
 	                for(int j =0; j<list2.size(); j++) {
 	                		String s = list2.get(j).getText();
 	                		System.out.println(s);
+	                		excel.writeExcelData("Sheet1",j+1,9,s);
 	                }
 	            }
 	            if (Text.contains("Amenities")) {
@@ -79,6 +82,7 @@ public class gym extends BasePage {
 	                for(int j =0; j<list2.size(); j++) {
 	                		String s = list2.get(j).getText();
 	                		System.out.println(s);
+	                		excel.writeExcelData("Sheet1",j+1,10,s);
 	                }
 	            }
 	            if (Text.contains("Ratings")) {
@@ -90,6 +94,7 @@ public class gym extends BasePage {
 	                for(int j =0; j<list2.size(); j++) {
 	                		String s = list2.get(j).getText();
 	                		System.out.println(s);
+	                		excel.writeExcelData("Sheet1",j+1,11,s);
 	                }
 	            }
 }

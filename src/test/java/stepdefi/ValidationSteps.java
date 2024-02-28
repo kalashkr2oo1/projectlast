@@ -123,7 +123,7 @@ public class ValidationSteps {
 	}
 
 	@Then("display the error message")
-	public void display_the_error_message() throws InterruptedException {
+	public void display_the_error_message() throws InterruptedException, IOException {
 	    free.printerrormsg();
 	}
 	
@@ -146,59 +146,10 @@ public class ValidationSteps {
 	}
 
 	@Then("finding and printing all dropdown menus")
-	public void finding_and_printing_all_dropdown_menus() throws InterruptedException {
+	public void finding_and_printing_all_dropdown_menus() throws InterruptedException, IOException {
 	    gyminfo.gyminfocollect();
 	}
 
-
-
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//	@Given("user is on the just dail page")
-//	public void user_is_on_the_just_dail_page() throws InterruptedException {
-//	    // Write code here that turns the phrase above into concrete actions
-//		Thread.sleep(10000);
-//		validation = new ValidationPage(BaseClass.getDriver());
-//		//validation();
-//		
-//	    Thread.sleep(10000);
-//	}
-//
-//	@Then("select location")
-//	public void select_location()
-//	{
-//		
-//	}
-//	@Then("sort and display name of top five carwash")
-//	public void sort_and_display_name_of_top_five_carwash() throws InterruptedException {
-//	    // Write code here that turns the phrase above into concrete actions
-//		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//		Thread.sleep(5000);
-//
-//		validation.applyfilter();
-//		validation.nameandnumber();
-//		 
-//	}
-//
-//	@Then("free listing page error")
-//	public void free_listing_page_error() throws InterruptedException {
-//	    // Write code here that turns the phrase above into concrete actions
-//		free=new freelist(BaseClass.getDriver());
-//		free.freelistaction();
-//	}
-//	@Then("find the gym and collect info")
-//	public void find_the_gym_and_collect_info() throws InterruptedException
-//	{
-//	gyminfo=new gym(BaseClass.getDriver());
-//	gyminfo.gyminfocollect();
-//		
 }
 

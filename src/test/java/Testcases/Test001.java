@@ -34,17 +34,9 @@ import pageobjects.ValidationPage;
 			page.printdeatils();
 			logger.info("Completed CarWashServicePage homepage automation.......................");
 			
-			//page.servicesDetails("Car Washing Services");
-		  //	logger.info("Completed JustDial homepage automation.......................");
-	 
+			
 			Thread.sleep(5000);
-	//	  	logger.info("Starting CarWashServicePage homepage automation.......................");
-//	 
-//			car.clickOnAllFilters();
-//		  	car.scrollAndSelectRatings();
-//		  	car.clickOnApplyFilters();
-//		  	car.serviceCenterNamesAndPhoneNumbers();
-//		  	logger.info("Completed CarWashServicePage homepage automation.......................");
+	
 		} 
 	}
 

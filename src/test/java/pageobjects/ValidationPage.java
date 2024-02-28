@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import factoryy.BaseClass;
+import utilities.excel;
 
 public class ValidationPage extends BasePage {
 	
@@ -99,7 +100,7 @@ public class ValidationPage extends BasePage {
 		
     }
     
-    public void printdeatils() throws InterruptedException {
+    public void printdeatils() throws InterruptedException, IOException {
     	String s = null,p = null, v= null;
 		int g=0;
 		List<WebElement> names= driver.findElements(carWashServiceNames);
@@ -130,6 +131,9 @@ public class ValidationPage extends BasePage {
 			if(c>20) {
 				g++;
 			System.out.println("Car Wash Service Name: "+s+"  ; Phone Number: "+p+"  ; Customer Ratings: "+c);
+			excel.writeExcelData("Sheet1",j+1,0,s);
+			excel.writeExcelData("Sheet1",j+1,1,p);
+			excel.writeExcelData1("Sheet1",j+1,2,c);
 			
 	}
 			if(g==j)
@@ -145,73 +149,6 @@ public class ValidationPage extends BasePage {
     
     
     
-//    
-//    public void clicksearch() throws InterruptedException {
-//    	filters.click();
-//    }
-//    
-//    
-//    
-//    
-//    
-//    
-//    
-//    
-//    
-//    
-//	public void applyfilter() throws InterruptedException {
-//
-//		filters.click();
-//		WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(60));
-//		wait.until(ExpectedConditions.visibilityOf(rating));
-//		JavascriptExecutor js =(JavascriptExecutor)driver;
-//		js.executeScript("arguments[0].scrollIntoView(true);",rating);
-//		Thread.sleep(5000);
-//		rating.click();
-//		apply.click();
-//		
-//	}
-//	
-//	
-//	public void nameandnumber() throws InterruptedException
-//	{
-//		String s = null,p = null, v= null;
-//		int g=0;
-//		List<WebElement> names= driver.findElements(carWashServiceNames);
-//		List<String> namesList=new ArrayList<String>();
-//		List<WebElement> hiddenIcon= driver.findElements(hiddenPhoneNumbers);
-//		List<WebElement> phoneNumbers= driver.findElements(carWashServiceContacts);
-//		List<String> phoneNumbersList= new ArrayList<String>();
-//		List<WebElement> customerRatings= driver.findElements(customerVotes); 
-//		List<String> customerRatingsList=new ArrayList<String>();
-// 
-//		for(int j =0;j<5;j++) {
-//			System.out.println("--------------------------------------------------------------------------------------");
-//			namesList.add(names.get(j).getText());
-//			s=namesList.get(j);
-//			WebElement z=hiddenIcon.get(j);
-//			z.click();
-//			Thread.sleep(2000);
-//			z=phoneNumbers.get(j);
-//			Thread.sleep(2000);
-//			phoneNumbersList.add(z.getAttribute("data-href"));
-//			p=phoneNumbersList.get(j);
-//			Thread.sleep(2000);
-//			customerRatingsList.add(customerRatings.get(j).getText());
-//			v=customerRatingsList.get(j);
-//			v = v.replaceAll("\\D", "");
-//			int c=Integer.parseInt(v);
-//			if(c>20) {
-//				g++;
-//			System.out.println("Car Wash Service Name: "+s+"  ; Phone Number: "+p+"  ; Customer Ratings: "+c);
-//			
-//	}
-//			if(g==j)
-//			{
-//				j--;
-//			}
-//			
-//}
-//	}
+
 }
 
