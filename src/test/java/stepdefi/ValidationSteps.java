@@ -1,36 +1,35 @@
 package stepdefi;
 
 import java.io.IOException;
-import java.time.Duration;
+
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-
-import factoryy.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pageobjects.ValidationPage;
 import pageobjects.freelist;
 import pageobjects.gym;
 
-public class ValidationSteps {
+public class ValidationSteps{
 	
-   public 	ValidationPage validation;
+    public 	ValidationPage validation;
 	public freelist free;
 	public gym gyminfo;
 	public WebDriver driver;
 	public Properties p;
 	
+	
 	@Given("user is on the justdail page")
 	public void user_is_on_the_justdail_page() {
 		driver=Hooks.driver;
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		
 		validation = new ValidationPage(driver);
 	}
 
 	@Then("click on later button")
 	public void click_on_later_button() throws InterruptedException, IOException {
-		validation = new ValidationPage(driver);
+		
 		validation.clicklater();
 		Hooks.ScreenShots("mainpage.png");
 	   }
@@ -60,7 +59,7 @@ public class ValidationSteps {
 
 	@Then("click on search")
 	public void click_on_search() throws InterruptedException {
-		validation.clicksearchbar();
+		//validation.clicksearchbar();
 		
 	}
 

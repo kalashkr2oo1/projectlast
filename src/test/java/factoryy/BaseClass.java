@@ -18,7 +18,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
@@ -33,7 +32,7 @@ public class BaseClass {
 	public static ChromeOptions options = new ChromeOptions();
 	static EdgeOptions optionss =new EdgeOptions();
 	
-	@BeforeClass
+	@BeforeClass(groups= {"sanity"})
 	@Parameters({"os", "browser"})
 	public void initilizeBrowser(String os, String browser) throws IOException {
 		logger=LogManager.getLogger(Logger.class.getName());
@@ -73,7 +72,7 @@ public class BaseClass {
 			capabilities.setBrowserName("chrome"); 
 			break;
 		case "edge" :
-			capabilities.setCapability(ChromeOptions.CAPABILITY, optionss);
+			capabilities.setCapability(EdgeOptions.CAPABILITY, optionss);
 			capabilities.setBrowserName("MicrosoftEdge"); break;
 		default: System.out.println("No matching browser.."); return;
 		}
@@ -105,11 +104,11 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.get(getProperties().getProperty("appURL"));
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	
 		//return driver;
 	}
-     @AfterClass
+     @AfterClass(groups={"sanity"})
 	public void  tearDown() {
 		
 

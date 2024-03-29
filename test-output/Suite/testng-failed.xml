@@ -7,28 +7,23 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="windows"/>
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="sanity"/>
+        <include name="regression"/>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="Testcases.Test003">
-        <methods>
-          <include name="tearDown"/>
-          <include name="GymPage"/>
-          <include name="initilizeBrowser"/>
-        </methods>
-      </class> <!-- Testcases.Test003 -->
       <class name="Testcases.Test001">
         <methods>
           <include name="JustDialHomePage"/>
+          <include name="selectlocation"/>
           <include name="tearDown"/>
+          <include name="secondpage"/>
           <include name="initilizeBrowser"/>
         </methods>
       </class> <!-- Testcases.Test001 -->
-      <class name="Testcases.Test002">
-        <methods>
-          <include name="Freelistingpage"/>
-          <include name="tearDown"/>
-          <include name="initilizeBrowser"/>
-        </methods>
-      </class> <!-- Testcases.Test002 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

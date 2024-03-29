@@ -9,17 +9,26 @@ import pageobjects.freelist;
 		
 		 
 		public class Test002 extends BaseClass{
-		  @Test
+		public freelist page;
+		  @Test(priority=1,groups={"sanity","smoke"})
 		  public void Freelistingpage() throws InterruptedException, IOException {
 			  	
-			  	freelist page = new freelist(driver);
+			   page = new freelist(driver);
 			  	logger.info("Starting Freelisting homepage automation.......................");
 			  //	carWashServicesPage car = new carWashServicesPage(driver);
 		 
 				page.freebuttonclick();
 				BaseClass.ScreenShots("freelist.png");
 				logger.info("Reached on Freee listing page.......................");
-				page.clickonnuminput();
+				
+				Thread.sleep(5000);
+		
+			} 
+		  @Test(priority=2,groups={"regression"})
+		  public void check () throws InterruptedException, IOException
+		  {
+			  
+			  page.clickonnuminput();
 				page.sendnumber();
 				BaseClass.ScreenShots("sendnumber.png");
 				logger.info("Sent the phone no. input.......................");
@@ -29,13 +38,8 @@ import pageobjects.freelist;
 				logger.info("Error message captured.......................");
 				page.printerrormsg();
 				logger.info("Completed Freelisting homepage automation.......................");
-				
-				
-			
-		 
-				Thread.sleep(5000);
-		
-			} 
+			  
+		  }
 		}
 
 

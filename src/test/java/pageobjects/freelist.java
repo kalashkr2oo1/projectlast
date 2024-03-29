@@ -48,7 +48,7 @@ public class freelist extends BasePage {
 		
 		public void clickstart() throws InterruptedException, IOException {
 			startbutton.click();
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			
 		}
 		

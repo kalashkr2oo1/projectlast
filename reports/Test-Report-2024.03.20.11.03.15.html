@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">JustDial Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 28, 2024 05:19:51 PM</span></a>
+<a href="#"><span class="badge badge-primary">Mar 20, 2024 11:03:15 AM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -71,17 +76,23 @@
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">sanity</a><a class="dropdown-item" href="#">smoke</a>
+</ul>
+</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
         <li class="test-item"  status="fail" test-id="1"
           author=""
-          tag=""
+          tag="smoke sanity"
           device="">
           <div class="test-detail">
             <p class="name">Testcases.Test001</p>
             <p class="text-sm">
-              <span>5:20:25 PM</span> / <span>00:00:00:082</span>
+              <span>11:03:45 AM</span> / <span>00:00:00:047</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -90,14 +101,16 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Testcases.Test001</h5>
-<span class='badge badge-success'>02.28.2024 5:20:25 PM</span>
-<span class='badge badge-danger'>02.28.2024 5:20:25 PM</span>
-<span class='badge badge-default'>00:00:00:082</span>
+<span class='badge badge-success'>03.20.2024 11:03:45 AM</span>
+<span class='badge badge-danger'>03.20.2024 11:03:45 AM</span>
+<span class='badge badge-default'>00:00:00:047</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">sanity</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -105,24 +118,20 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:20:25 PM</td>
+        <td>11:03:45 AM</td>
         <td>
           JustDialHomePage got failed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:20:25 PM</td>
+        <td>11:03:45 AM</td>
         <td>
-          no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.99)
+          Unable to find element with locator By.xpath: //*[@id="__next"]/div/section/div[1]/section[1]/div/div[2]/div/div[3]/span
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3455bdb2ade6d7c7621b75d573cf5eef, findElement {using=xpath, value=//*[@id='react-autowhatever-city-auto-suggest']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.99, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:57242}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57242/devtoo..., se:cdpVersion: 115.0.5790.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3455bdb2ade6d7c7621b75d573cf5eef
+Driver info: driver.version: RemoteWebDriver
         </td>
       </tr>
   </tbody>
@@ -132,12 +141,12 @@ Session ID: 3455bdb2ade6d7c7621b75d573cf5eef
         </li>
         <li class="test-item"  status="fail" test-id="2"
           author=""
-          tag=""
+          tag="smoke sanity"
           device="">
           <div class="test-detail">
             <p class="name">Testcases.Test001</p>
             <p class="text-sm">
-              <span>5:20:25 PM</span> / <span>00:00:00:002</span>
+              <span>11:03:45 AM</span> / <span>00:00:00:003</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -146,14 +155,16 @@ Session ID: 3455bdb2ade6d7c7621b75d573cf5eef
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Testcases.Test001</h5>
-<span class='badge badge-success'>02.28.2024 5:20:25 PM</span>
-<span class='badge badge-danger'>02.28.2024 5:20:25 PM</span>
-<span class='badge badge-default'>00:00:00:002</span>
+<span class='badge badge-success'>03.20.2024 11:03:45 AM</span>
+<span class='badge badge-danger'>03.20.2024 11:03:45 AM</span>
+<span class='badge badge-default'>00:00:00:003</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">sanity</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -161,24 +172,24 @@ Session ID: 3455bdb2ade6d7c7621b75d573cf5eef
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:20:25 PM</td>
+        <td>11:03:45 AM</td>
         <td>
           JustDialHomePage got failed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:20:25 PM</td>
+        <td>11:03:45 AM</td>
         <td>
           no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=115.0.5790.99)
+  (Session info: MicrosoftEdge=122.0.2365.92)
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3455bdb2ade6d7c7621b75d573cf5eef, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.99, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:57242}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57242/devtoo..., se:cdpVersion: 115.0.5790.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3455bdb2ade6d7c7621b75d573cf5eef
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5f0243b3808d22d65204952d277f637a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 122.0.2365.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58726}, msedge: {msedgedriverVersion: 122.0.2365.92 (908657ec17be..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58726/devtoo..., se:cdpVersion: 122.0.2365.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f0243b3808d22d65204952d277f637a
         </td>
       </tr>
   </tbody>
@@ -195,18 +206,114 @@ Session ID: 3455bdb2ade6d7c7621b75d573cf5eef
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">sanity</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>sanity</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:03:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Testcases.Test001</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:03:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Testcases.Test001</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">smoke</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>smoke</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:03:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Testcases.Test001</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:03:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Testcases.Test001</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 28, 2024 05:19:51 PM</h3>
+<h3>Mar 20, 2024 11:03:15 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 28, 2024 05:20:27 PM</h3>
+<h3>Mar 20, 2024 11:03:45 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -276,10 +383,35 @@ Session ID: 3455bdb2ade6d7c7621b75d573cf5eef
 </div></div>
 <script>
 var timeline = {
-"Testcases.Test001":0.082,"Testcases.Test001":0.002
+"Testcases.Test001":0.047,"Testcases.Test001":0.003
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>sanity</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>smoke</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 <div class="col-lg-6 col-md-12 sysenv-container">
 <div class="card">
 <div class="card-header"><p>System/Environment</p></div>
@@ -312,7 +444,11 @@ var timeline = {
 </tr>
 <tr>
 <td>Browser</td>
-<td>chrome</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Groups</td>
+<td>[sanity, regression, smoke]</td>
 </tr>
 </tbody>
 </table></div>

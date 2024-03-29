@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import factoryy.BaseClass;
 import utilities.excel;
 
  
@@ -36,7 +34,7 @@ public class gym extends BasePage {
 		
 		static By subMenuTitles = By.xpath("//*[@id='filter_ul']/li");
 		
-		static By dropDownList = By.xpath("//*[@class = 'jsx-6ab5af3a8693e5db animlabel']");
+		static By dropDownList = By.xpath("//*[@class = 'jsx-776077f7d926fc80 animlabel']");
 
 		
 			public void gomainpage() throws InterruptedException {
@@ -45,7 +43,7 @@ public class gym extends BasePage {
 		}
 			public void gympageclick() throws InterruptedException, IOException {
 				gymbutton.click();
-				Thread.sleep(2000);
+				//Thread.sleep(2000);
 				
 		}
 		

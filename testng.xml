@@ -6,14 +6,28 @@
 <listener class-name="utilities.ExtentReportManager"/>
 </listeners>
 
+
 <test thread-count="5" name="Test">
-<parameter name="browser" value="edge"/>
+<parameter name="browser" value="chrome"/>
 <parameter name="os" value="windows"/>
 
+<groups>
+<run>
+
+<include name="sanity" />
+<include name="regression" />
+<include name="smoke" />
+
+
+
+
+</run>
+</groups>
 
 
 <classes>
 <class name="Testcases.Test001"/>
+
 <class name="Testcases.Test002"/>
 <class name="Testcases.Test003"/>
 </classes>

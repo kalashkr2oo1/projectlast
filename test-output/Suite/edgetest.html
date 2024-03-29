@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>edgetest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 28 17:29:59 IST 2024</td>
+<td>Started on:</td><td>Mon Mar 11 15:32:52 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>60 seconds (60983 ms)</td>
+<tr><td>Total time:</td><td>406 seconds (406790 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,15 +77,15 @@ function toggleAllBoxes() {
 <tr>
 <td title='Testcases.Test001.JustDialHomePage()'><b>JustDialHomePage</b><br>Test class: Testcases.Test001</td>
 <td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=115.0.5790.99)
+  (Session info: chrome=120.0.6099.130)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [22fdc4b849617c355d3991b97b47675b, clickElement {id=52B5CC3C92AFD7401DCCCBA5D098A058_element_183}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.99, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:58704}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58704/devtoo..., se:cdpVersion: 115.0.5790.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (22fdc4b849617c355d3991b97b47675b)] -&gt; xpath: //*[@id=&quot;__next&quot;]/div/section/div[1]/section[1]/div/div[2]/div/div[3]/span]
-Session ID: 22fdc4b849617c355d3991b97b47675b
+Command: [86dd40c5827d8c96926cc73b095fd243, clickElement {id=65622F8DB0E3BC33CB369FE3202B462E_element_151}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56040}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56040/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (86dd40c5827d8c96926cc73b095fd243)] -&gt; xpath: //*[@id=&quot;__next&quot;]/div/section/div[1]/section[1]/div/div[2]/div/div[3]/span]
+Session ID: 86dd40c5827d8c96926cc73b095fd243
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -97,24 +97,24 @@ Session ID: 22fdc4b849617c355d3991b97b47675b
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy49.click(Unknown Source)
-	at pageobjects.ValidationPage.clicklater(ValidationPage.java:65)
-	at Testcases.Test001.JustDialHomePage(Test001.java:16)
+	at pageobjects.ValidationPage.clicklater(ValidationPage.java:60)
+	at Testcases.Test001.JustDialHomePage(Test001.java:19)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1954742985", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1954742985'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=115.0.5790.99)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace636702882", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace636702882'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.130)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [22fdc4b849617c355d3991b97b47675b, clickElement {id=52B5CC3C92AFD7401DCCCBA5D098A058_element_183}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.99, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\Windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:58704}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58704/devtoo..., se:cdpVersion: 115.0.5790.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (22fdc4b849617c355d3991b97b47675b)] -&gt; xpath: //*[@id=&quot;__next&quot;]/div/section/div[1]/section[1]/div/div[2]/div/div[3]/span]
-Session ID: 22fdc4b849617c355d3991b97b47675b
+Command: [86dd40c5827d8c96926cc73b095fd243, clickElement {id=65622F8DB0E3BC33CB369FE3202B462E_element_151}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56040}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56040/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (86dd40c5827d8c96926cc73b095fd243)] -&gt; xpath: //*[@id=&quot;__next&quot;]/div/section/div[1]/section[1]/div/div[2]/div/div[3]/span]
+Session ID: 86dd40c5827d8c96926cc73b095fd243
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -135,8 +135,8 @@ Session ID: 22fdc4b849617c355d3991b97b47675b
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy49.click(Unknown Source)
-	at pageobjects.ValidationPage.clicklater(ValidationPage.java:65)
-	at Testcases.Test001.JustDialHomePage(Test001.java:16)
+	at pageobjects.ValidationPage.clicklater(ValidationPage.java:60)
+	at Testcases.Test001.JustDialHomePage(Test001.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -161,8 +161,31 @@ Session ID: 22fdc4b849617c355d3991b97b47675b
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 </pre></div></td>
-<td>5</td>
-<td>Testcases.Test001@3a7442c7</td></tr>
+<td>6</td>
+<td>Testcases.Test001@5f049ea1</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Testcases.Test002.check()'><b>check</b><br>Test class: Testcases.Test002</td>
+<td></td>
+<td>73</td>
+<td>Testcases.Test002@72cc7e6f</td></tr>
+<tr>
+<td title='Testcases.Test003.GymPage()'><b>GymPage</b><br>Test class: Testcases.Test003</td>
+<td></td>
+<td>14</td>
+<td>Testcases.Test003@5afa3c9</td></tr>
+<tr>
+<td title='Testcases.Test002.Freelistingpage()'><b>Freelistingpage</b><br>Test class: Testcases.Test002</td>
+<td></td>
+<td>13</td>
+<td>Testcases.Test002@72cc7e6f</td></tr>
 </table><p>
 </body>
 </html>

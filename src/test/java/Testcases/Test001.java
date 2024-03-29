@@ -8,15 +8,24 @@ import pageobjects.ValidationPage;
 	
 	 
 	public class Test001 extends BaseClass{
-	  @Test
+		
+		public ValidationPage page;
+		
+	  @Test(priority=1,groups={"sanity","smoke"})
 	  public void JustDialHomePage() throws InterruptedException, IOException {
 			logger.info("Starting JustDial homepage automation.......................");
-		  	ValidationPage page = new ValidationPage(driver);
+		  	 page = new ValidationPage(driver);
 		  	
 			page.clicklater();
 			BaseClass.ScreenShots("mainpage.png");
 			logger.info("Reached JustDial homepage automation.......................");
-			page.clicklocation();
+			
+			
+	
+		} 
+	  @Test(priority=2,groups={"sanity"},dependsOnMethods={"JustDialHomePage"})
+	  public void selectlocation() throws InterruptedException, IOException {
+		  page.clicklocation();
 			BaseClass.ScreenShots("location.png");
 			page.clickdetect();
 			BaseClass.ScreenShots("detect.png");
@@ -25,7 +34,11 @@ import pageobjects.ValidationPage;
 			page.sendcarwash();
 			BaseClass.ScreenShots("sendcarwash.png");
 			logger.info("Reached JustDial carwashing at current location.......................");
-			page.filterapply();
+	  }
+	  @Test(priority=3,groups={"sanity","regression"},dependsOnMethods={"JustDialHomePage","selectlocation"})
+	  public void secondpage() throws InterruptedException, IOException {
+		  Thread.sleep(5000);
+		  page.filterapply();
 			BaseClass.ScreenShots("filters.png");
 			page.scrolldown();
 			page.clickapply();
@@ -36,8 +49,8 @@ import pageobjects.ValidationPage;
 			
 			
 			Thread.sleep(5000);
-	
-		} 
+	  }
+	  
 	}
 
 

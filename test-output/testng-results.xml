@@ -1,9 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-28T17:33:58 IST" name="Suite" finished-at="2024-02-28T17:33:58 IST" duration-ms="0">
+  <suite started-at="2024-03-28T10:40:36 IST" name="Suite" finished-at="2024-03-28T10:43:24 IST" duration-ms="168045">
     <groups>
+      <group name="regression">
+        <method signature="Test001.secondpage()[pri:3, instance:Testcases.Test001@54c5a2ff]" name="secondpage" class="Testcases.Test001"/>
+        <method signature="Test002.check()[pri:2, instance:Testcases.Test002@449a4f23]" name="check" class="Testcases.Test002"/>
+        <method signature="Test003.collectinfo()[pri:2, instance:Testcases.Test003@1530c739]" name="collectinfo" class="Testcases.Test003"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="Test001.JustDialHomePage()[pri:1, instance:Testcases.Test001@54c5a2ff]" name="JustDialHomePage" class="Testcases.Test001"/>
+        <method signature="Test002.Freelistingpage()[pri:1, instance:Testcases.Test002@449a4f23]" name="Freelistingpage" class="Testcases.Test002"/>
+        <method signature="Test003.GymPage()[pri:1, instance:Testcases.Test003@1530c739]" name="GymPage" class="Testcases.Test003"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="Test001.JustDialHomePage()[pri:1, instance:Testcases.Test001@54c5a2ff]" name="JustDialHomePage" class="Testcases.Test001"/>
+        <method signature="Test001.selectlocation()[pri:2, instance:Testcases.Test001@54c5a2ff]" name="selectlocation" class="Testcases.Test001"/>
+        <method signature="Test001.secondpage()[pri:3, instance:Testcases.Test001@54c5a2ff]" name="secondpage" class="Testcases.Test001"/>
+        <method signature="Test002.Freelistingpage()[pri:1, instance:Testcases.Test002@449a4f23]" name="Freelistingpage" class="Testcases.Test002"/>
+        <method signature="Test003.GymPage()[pri:1, instance:Testcases.Test003@1530c739]" name="GymPage" class="Testcases.Test003"/>
+      </group> <!-- sanity -->
     </groups>
+    <test started-at="2024-03-28T10:40:36 IST" name="Test" finished-at="2024-03-28T10:43:24 IST" duration-ms="168045">
+      <class name="Testcases.Test003">
+        <test-method is-config="true" signature="initilizeBrowser(java.lang.String,java.lang.String)[pri:0, instance:Testcases.Test003@1530c739]" started-at="2024-03-28T10:42:49 IST" name="initilizeBrowser" finished-at="2024-03-28T10:43:05 IST" duration-ms="15534" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initilizeBrowser -->
+        <test-method signature="GymPage()[pri:1, instance:Testcases.Test003@1530c739]" started-at="2024-03-28T10:43:05 IST" name="GymPage" finished-at="2024-03-28T10:43:15 IST" duration-ms="10261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GymPage -->
+        <test-method signature="collectinfo()[pri:2, instance:Testcases.Test003@1530c739]" started-at="2024-03-28T10:43:16 IST" name="collectinfo" finished-at="2024-03-28T10:43:22 IST" depends-on-methods="Testcases.Test003.GymPage" duration-ms="6296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- collectinfo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.Test003@1530c739]" started-at="2024-03-28T10:43:22 IST" name="tearDown" finished-at="2024-03-28T10:43:24 IST" duration-ms="1140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.Test003 -->
+      <class name="Testcases.Test002">
+        <test-method is-config="true" signature="initilizeBrowser(java.lang.String,java.lang.String)[pri:0, instance:Testcases.Test002@449a4f23]" started-at="2024-03-28T10:42:07 IST" name="initilizeBrowser" finished-at="2024-03-28T10:42:37 IST" duration-ms="30242" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initilizeBrowser -->
+        <test-method signature="Freelistingpage()[pri:1, instance:Testcases.Test002@449a4f23]" started-at="2024-03-28T10:42:37 IST" name="Freelistingpage" finished-at="2024-03-28T10:42:46 IST" duration-ms="8296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Freelistingpage -->
+        <test-method signature="check()[pri:2, instance:Testcases.Test002@449a4f23]" started-at="2024-03-28T10:42:46 IST" name="check" finished-at="2024-03-28T10:42:48 IST" duration-ms="1534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.Test002@449a4f23]" started-at="2024-03-28T10:42:48 IST" name="tearDown" finished-at="2024-03-28T10:42:49 IST" duration-ms="1265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.Test002 -->
+      <class name="Testcases.Test001">
+        <test-method is-config="true" signature="initilizeBrowser(java.lang.String,java.lang.String)[pri:0, instance:Testcases.Test001@54c5a2ff]" started-at="2024-03-28T10:40:36 IST" name="initilizeBrowser" finished-at="2024-03-28T10:41:05 IST" duration-ms="29031" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initilizeBrowser -->
+        <test-method signature="JustDialHomePage()[pri:1, instance:Testcases.Test001@54c5a2ff]" started-at="2024-03-28T10:41:05 IST" name="JustDialHomePage" finished-at="2024-03-28T10:41:07 IST" duration-ms="1820" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- JustDialHomePage -->
+        <test-method signature="selectlocation()[pri:2, instance:Testcases.Test001@54c5a2ff]" started-at="2024-03-28T10:41:08 IST" name="selectlocation" finished-at="2024-03-28T10:41:18 IST" depends-on-methods="Testcases.Test001.JustDialHomePage" duration-ms="9749" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectlocation -->
+        <test-method signature="secondpage()[pri:3, instance:Testcases.Test001@54c5a2ff]" started-at="2024-03-28T10:41:18 IST" name="secondpage" finished-at="2024-03-28T10:42:05 IST" depends-on-methods="Testcases.Test001.JustDialHomePage, Testcases.Test001.selectlocation" duration-ms="47296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- secondpage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.Test001@54c5a2ff]" started-at="2024-03-28T10:42:06 IST" name="tearDown" finished-at="2024-03-28T10:42:07 IST" duration-ms="1333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.Test001 -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

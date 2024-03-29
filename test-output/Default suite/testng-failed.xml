@@ -6,7 +6,9 @@
       <class name="Testcases.Test001">
         <methods>
           <include name="JustDialHomePage"/>
+          <include name="selectlocation"/>
           <include name="tearDown"/>
+          <include name="secondpage"/>
           <include name="initilizeBrowser"/>
         </methods>
       </class> <!-- Testcases.Test001 -->

@@ -1,7 +1,6 @@
 package pageobjects;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +9,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import factoryy.BaseClass;
+
 import utilities.excel;
 
 public class ValidationPage extends BasePage {
@@ -40,7 +37,7 @@ public class ValidationPage extends BasePage {
 	@FindBy(xpath="(//div[@class='search_text font14 fw400 color111'])[1]")
 	WebElement selectcarwash;
 	
-	@FindBy(xpath="//*[@id=\"filter_ul\"]/li[10]/div/div")
+	@FindBy(xpath="//*[@class=\"jsx-abd03633235cbc61 resfilter_item gray_whitefill_animat\"]")
 	WebElement filters;
 	
 	@FindBy(xpath=" //*[@id=\"__next\"]/section/section/div/div[4]/aside/div/div[2]/div/div[1]/div[5]/span[3]")
@@ -49,8 +46,23 @@ public class ValidationPage extends BasePage {
 	@FindBy(xpath="//*[@id=\"__next\"]/section/section/div/div[4]/aside/div/div[2]/div/div[2]/button[2]")
 	WebElement apply;
 	
-	static By carWashServiceNames = By.xpath("//div[@class='jsx-3349e7cd87e12d75 resultbox_title_anchor  line_clamp_1']");
-	                                           
+//	@FindBy(xpath="//div[@class='jsx-3349e7cd87e12d75 resultbox_title_anchor  line_clamp_1 ']")
+//	List<WebElement> carWashServiceNames; 
+//	
+//	@FindBy(xpath="//div[@class='jsx-3349e7cd87e12d75 button_flare']")
+//	WebElement hiddenPhoneNumbers;
+//	
+//	@FindBy(xpath="//span[@class='jsx-3349e7cd87e12d75 callcontent']")
+//	WebElement carWashServiceContacts;
+//	
+//	@FindBy(xpath="//div[@class='jsx-3349e7cd87e12d75 resultbox_countrate ml-12 mr-12 font14 fw400 color777']")
+//	List<WebElement> customerVotes;
+	
+	
+	
+	
+	static By carWashServiceNames = By.xpath("//div[@class='jsx-3349e7cd87e12d75 resultbox_title_anchor  line_clamp_1 ']");
+    
 	static By hiddenPhoneNumbers = By.xpath("//div[@class='jsx-3349e7cd87e12d75 button_flare']");
 	
 	static By carWashServiceContacts = By.xpath("//span[@class='jsx-3349e7cd87e12d75 callcontent']");
@@ -58,8 +70,8 @@ public class ValidationPage extends BasePage {
 	static By customerVotes = By.xpath("//div[@class='jsx-3349e7cd87e12d75 resultbox_countrate ml-12 mr-12 font14 fw400 color777']");
 	
  
-//	@FindBy(xpath=" //*[@id=\"__next\"]/section/section/div/div[4]/aside/div/div[2]/div/div[1]/div[5]/span[3]")
-//	WebElement rating;
+ 
+
 	
 	public void clicklater() throws InterruptedException, IOException {
 		laterbutton.click();
@@ -71,14 +83,17 @@ public class ValidationPage extends BasePage {
 	
     public void clickdetect() throws InterruptedException {
     	detectlocation.click();
-    	Thread.sleep(5000);
+    //	Thread.sleep(5000);
     }
     public void clicksearchbar() throws InterruptedException {
     	searchbar.click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
     }
+    
     public void sendcarwash() throws InterruptedException {
     	searchbar.sendKeys("car wash");
+    	//WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(60));
+    	//wait.until(ExpectedConditions.elementToBeClickable(selectcarwash));
 		Thread.sleep(5000);
 		selectcarwash.click();
 		
@@ -89,10 +104,10 @@ public class ValidationPage extends BasePage {
     public void scrolldown() throws InterruptedException {
     //	WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.visibilityOf(rating));
-    	Thread.sleep(2000);
+    	//Thread.sleep(2000);
 		JavascriptExecutor js =(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",rating);
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
     }
     public void clickapply() throws InterruptedException, IOException {
     	rating.click();
@@ -118,12 +133,14 @@ public class ValidationPage extends BasePage {
 			s=namesList.get(j);
 			WebElement z=hiddenIcon.get(j);
 			z.click();
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			z=phoneNumbers.get(j);
-			Thread.sleep(2000);
+			Thread.sleep(3000);
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(hiddenPhoneNumbers));
 			phoneNumbersList.add(z.getAttribute("data-href"));
 			p=phoneNumbersList.get(j);
-			Thread.sleep(2000);
+			//System.out.println(p);
+			//Thread.sleep(2000);
 			customerRatingsList.add(customerRatings.get(j).getText());
 			v=customerRatingsList.get(j);
 			v = v.replaceAll("\\D", "");

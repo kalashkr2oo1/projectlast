@@ -6,8 +6,19 @@
 </listeners>
 
 <test thread-count="5" name="Test">
-<parameter name="os" value="Windows"></parameter>
+<parameter name="os" value=" Windows"></parameter>
 <parameter name="browser" value="chrome"></parameter>
+
+<groups>
+<run>
+
+<include name="sanity" />
+<include name="regression" />
+<include name="smoke" />
+
+</run>
+</groups>
+
 <classes>
 <class name="Testcases.Test001"/>
 <class name="Testcases.Test002"/>

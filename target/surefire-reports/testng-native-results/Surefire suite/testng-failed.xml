@@ -10,13 +10,6 @@
           <include name="initilizeBrowser"/>
         </methods>
       </class> <!-- Testcases.Test002 -->
-      <class name="Testcases.Test003">
-        <methods>
-          <include name="tearDown"/>
-          <include name="GymPage"/>
-          <include name="initilizeBrowser"/>
-        </methods>
-      </class> <!-- Testcases.Test003 -->
       <class name="Testcases.Test001">
         <methods>
           <include name="JustDialHomePage"/>
@@ -24,6 +17,13 @@
           <include name="initilizeBrowser"/>
         </methods>
       </class> <!-- Testcases.Test001 -->
+      <class name="Testcases.Test003">
+        <methods>
+          <include name="tearDown"/>
+          <include name="GymPage"/>
+          <include name="initilizeBrowser"/>
+        </methods>
+      </class> <!-- Testcases.Test003 -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

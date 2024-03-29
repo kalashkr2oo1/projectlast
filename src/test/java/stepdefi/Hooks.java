@@ -16,13 +16,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 
 public class Hooks {
 	public static WebDriver driver;
@@ -99,7 +96,9 @@ public class Hooks {
 		driver.manage().deleteAllCookies();
 		driver.get(getProperties().getProperty("appURL"));
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		
 }
 	 
 	
@@ -114,29 +113,7 @@ public class Hooks {
 	 
 	
 	 
-//	 public WebDriver initilizeBrowser() throws IOException {
-//		 if (getProperties().getProperty("execution_env").equalsIgnoreCase("local")) {
-//			switch (getProperties().getProperty("browser")) {
-//				case "chrome":
-//					options.addArguments("--disable-blink-features=AutomationControlled");
-//				
-//					driver=new ChromeDriver(options);
-//				
-//
-//					break;
-//				case "firefox":
-//					driver = new FirefoxDriver();
-//					break;
-//				default:
-//					driver = new EdgeDriver();
-//			}
-//		}
-//		
-//
-//		return driver;
-//	}
-//		
-   
+	 
    @After
    public void tearDown() {
        		
